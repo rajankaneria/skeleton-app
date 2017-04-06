@@ -12,6 +12,7 @@ return array(
     'ZendDiagnosticsTest\\' => array($vendorDir . '/zendframework/zenddiagnostics/tests'),
     'ZendDeveloperTools' => array($vendorDir . '/zendframework/zend-developer-tools/src'),
     'ZFTool\\' => array($vendorDir . '/zendframework/zftool/src'),
+    'User' => array($baseDir . '/module/User/src'),
     'TwbBundle' => array($vendorDir . '/neilime/zf2-twb-bundle/src'),
     'Rbac\\' => array($vendorDir . '/zfr/rbac/src'),
     'ProxyManager\\' => array($vendorDir . '/ocramius/proxy-manager/src'),

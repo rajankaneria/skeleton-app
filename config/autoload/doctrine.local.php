@@ -18,11 +18,12 @@ return array(
                 'params' => array(
                     'host'     => 'localhost',
                     'port'     => '3306',
-                    'user'     => '',
+                    'user'     => 'root',
                     'password' => '',
-                    'dbname'   => '',
+                    'dbname'   => 'skeleton',
+                    'encoding' => 'utf8',
                 )
             )
         )
-    ),
+    )
 );

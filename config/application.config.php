@@ -2,7 +2,11 @@
 return array(
     'modules' => array(
         'Application',
-        'TwbBundle'
+        'TwbBundle',
+        'ZendDeveloperTools',
+        'DoctrineModule',
+        'DoctrineORMModule',
+        'User'
     ),
     'module_listener_options' => array(
         'config_glob_paths'    => array(

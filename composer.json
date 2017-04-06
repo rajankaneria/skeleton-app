@@ -25,5 +25,8 @@
     "require-dev": {
         "zendframework/zftool": "dev-master",
         "zendframework/zend-developer-tools": "*"
+    },
+    "autoload":{
+        "psr-0": { "User": "module/User/src/" }
     }
 }

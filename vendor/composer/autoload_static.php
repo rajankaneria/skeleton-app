@@ -111,6 +111,13 @@ class ComposerStaticInit334c474e49a965545e95857f765fcc42
                 0 => __DIR__ . '/..' . '/zendframework/zftool/src',
             ),
         ),
+        'U' => 
+        array (
+            'User' => 
+            array (
+                0 => __DIR__ . '/../..' . '/module/User/src',
+            ),
+        ),
         'T' => 
         array (
             'TwbBundle' => 
