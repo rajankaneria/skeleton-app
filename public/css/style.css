@@ -42,3 +42,7 @@ input:-webkit-autofill:active
 .btn-full {
     width: 100%;
 }
+
+.confirm-modal{
+	width: 500px;
+}

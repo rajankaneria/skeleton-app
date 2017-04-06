@@ -23,7 +23,7 @@
                     <td><?php echo $userRow["email"]; ?></td>
                     <td><?php echo $userRow["phone"]; ?></td>
                     <td><?php echo $userRow["address"]; ?></td>
-                    <td><a href="#!" class="delete-btn"><i class="material-icons">delete</i></a></td>
+                    <td><a href="#!" onclick="deleteConfirm(<?php echo $userRow['id']; ?>)" class="delete-btn"><i class="material-icons">delete</i></a></td>
                   </tr>
                   <?php } ?>
 
@@ -34,4 +34,20 @@
         </div>
       </div>
       
+  </div>
+
+
+
+  <!-- Delete confirm Modal Structure -->
+  <div id="deleteConfirm" class="modal confirm-modal">
+    <div class="modal-content">
+      <h4 class="center-align">Delete User</h4>
+      <p class="center-align">Are you sure you want to delete this user?</p>
+    </div>
+    <div class="row modal-footer">
+    		<div class="col s2"></div>
+    		<div class="col s4"><a href="#!" class="btn-full modal-action modal-close waves-effect waves-green btn">Close</a></div>
+    		<div class="col s4"><a href="#!" class="btn-full btn waves-effect waves-green deep-orange darken-3">Delete</a></div>
+    		<div class="col s2"></div>
+    </div>
   </div>
