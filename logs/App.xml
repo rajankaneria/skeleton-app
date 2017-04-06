@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="Api" tests="1" assertions="0" failures="0" errors="1" time="0.515803">
+    <testsuite name="AdminTest\Factory\Service\ContactServiceTest" file="/var/www/module/Admin/test/AdminTest/Service/ContactServiceTest.php" tests="1" assertions="0" failures="0" errors="1" time="0.515803">
+      <testcase name="testRetrieveContactWithInvalidIdThrowsException" class="AdminTest\Factory\Service\ContactServiceTest" file="/var/www/module/Admin/test/AdminTest/Service/ContactServiceTest.php" line="50" assertions="0" time="0.515803">
+        <error type="PHPUnit_Framework_Exception">AdminTest\Factory\Service\ContactServiceTest::testRetrieveContactWithInvalidIdThrowsException
+PHPUnit_Framework_Exception: Method name matcher is not defined, cannot define parameter  matcher without one
+
+/var/www/module/Admin/test/AdminTest/Service/ContactServiceTest.php:65
+/var/www/module/Admin/test/AdminTest/Service/ContactServiceTest.php:52
+</error>
+      </testcase>
+    </testsuite>
+  </testsuite>
+</testsuites>

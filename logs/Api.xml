@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="Api" tests="3" assertions="2" failures="0" errors="1" time="0.040240">
+    <testsuite name="AdminTest\Factory\Controller\ContactControllerFactoryTest" file="/Users/guaravm/_dev/www/galliontrading/module/Admin/test/AdminTest/Factory/Controller/ContactControllerFactoryTest.php" tests="1" assertions="1" failures="0" errors="0" time="0.004259">
+      <testcase name="testFactory" class="AdminTest\Factory\Controller\ContactControllerFactoryTest" file="/Users/guaravm/_dev/www/galliontrading/module/Admin/test/AdminTest/Factory/Controller/ContactControllerFactoryTest.php" line="9" assertions="1" time="0.004259"/>
+    </testsuite>
+    <testsuite name="AdminTest\Factory\Controller\IndexControllerFactoryTest" file="/Users/guaravm/_dev/www/galliontrading/module/Admin/test/AdminTest/Factory/Controller/IndexControllerFactoryTest.php" tests="1" assertions="1" failures="0" errors="0" time="0.002491">
+      <testcase name="testFactory" class="AdminTest\Factory\Controller\IndexControllerFactoryTest" file="/Users/guaravm/_dev/www/galliontrading/module/Admin/test/AdminTest/Factory/Controller/IndexControllerFactoryTest.php" line="9" assertions="1" time="0.002491"/>
+    </testsuite>
+    <testsuite name="AdminTest\Factory\Controller\ContactServiceFactoryTest" file="/Users/guaravm/_dev/www/galliontrading/module/Admin/test/AdminTest/Factory/Service/ContactServiceFactoryTest.php" tests="1" assertions="0" failures="0" errors="1" time="0.033490">
+      <testcase name="testFactory" class="AdminTest\Factory\Controller\ContactServiceFactoryTest" file="/Users/guaravm/_dev/www/galliontrading/module/Admin/test/AdminTest/Factory/Service/ContactServiceFactoryTest.php" line="9" assertions="0" time="0.033490">
+        <error type="PHPUnit_Framework_ExceptionWrapper">AdminTest\Factory\Controller\ContactServiceFactoryTest::testFactory
+Zend\ServiceManager\Exception\ServiceNotCreatedException: An exception was raised while creating "Doctrine\ORM\EntityManager"; no instance returned
+
+/Users/guaravm/_dev/www/galliontrading/vendor/zendframework/zendframework/library/Zend/ServiceManager/ServiceManager.php:946
+/Users/guaravm/_dev/www/galliontrading/vendor/zendframework/zendframework/library/Zend/ServiceManager/ServiceManager.php:1097
+/Users/guaravm/_dev/www/galliontrading/vendor/zendframework/zendframework/library/Zend/ServiceManager/ServiceManager.php:638
+/Users/guaravm/_dev/www/galliontrading/vendor/zendframework/zendframework/library/Zend/ServiceManager/ServiceManager.php:598
+/Users/guaravm/_dev/www/galliontrading/vendor/zendframework/zendframework/library/Zend/ServiceManager/ServiceManager.php:530
+/Users/guaravm/_dev/www/galliontrading/module/Admin/src/Admin/Factory/Service/ContactServiceFactory.php:15
+/Users/guaravm/_dev/www/galliontrading/module/Admin/test/AdminTest/Factory/Service/ContactServiceFactoryTest.php:12
+phar:///usr/local/php5-5.5.18-20141103-095150/bin/phpunit/phpunit/TextUI/Command.php:179
+phar:///usr/local/php5-5.5.18-20141103-095150/bin/phpunit/phpunit/TextUI/Command.php:132
+</error>
+      </testcase>
+    </testsuite>
+  </testsuite>
+</testsuites>

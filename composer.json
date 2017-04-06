@@ -1,0 +1,29 @@
+{
+    "name": "{PROJECT_NAME}",
+    "description": "{PROJECT_DESCRIPTION}",
+    "authors": [
+        {
+            "name": "Gaurav Malhotra",
+            "email": "gaurav@level5websites.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+	    "php": ">=5.5",
+        "zendframework/zendframework": "2.4.2",
+        "zf-commons/zfc-rbac": "2.4.1",
+        "doctrine/orm": "2.4.7",
+        "doctrine/doctrine-orm-module": "0.9.0",
+        "doctrine/data-fixtures": "dev-master",
+        "phpunit/phpunit": "4.4.*",
+        "phpunit/phpunit-mock-objects": "2.3.*",
+        "phpunit/phpcov": "2.0.*",
+        "whatthejeff/nyancat-phpunit-resultprinter": "~1.2",
+        "ocramius/ocra-service-manager": "~2.1",
+        "neilime/zf2-twb-bundle": "2.*@stable"
+    },
+    "require-dev": {
+        "zendframework/zftool": "dev-master",
+        "zendframework/zend-developer-tools": "dev-master"
+    }
+}
