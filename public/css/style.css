@@ -5,3 +5,10 @@
 .container{
 	margin-top:50px;
 }
+a.delete-btn {
+    color: #ccc;
+}
+
+a.delete-btn:hover {
+    color: #e03434;
+}
