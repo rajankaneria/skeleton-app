@@ -24,6 +24,6 @@
     },
     "require-dev": {
         "zendframework/zftool": "dev-master",
-        "zendframework/zend-developer-tools": "dev-master"
+        "zendframework/zend-developer-tools": "*"
     }
 }
