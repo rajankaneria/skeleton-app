@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
 
-    <?php echo $this->headTitle('ZF2 ' . $this->translate('Skeleton Application'))->setSeparator(' - ')->setAutoEscape(
+    <?php echo $this->headTitle('Code Test' . $this->translate('Skeleton Application'))->setSeparator(' - ')->setAutoEscape(
         false
     ) ?>
 
@@ -12,16 +12,27 @@
         ->appendHttpEquiv('X-UA-Compatible', 'IE=edge')
     ?>
 
-    <?php echo $this->headLink()->appendStylesheet($this->basePath('css/bootstrap.min.css')); ?>
+    <?php echo $this->headLink()->appendStylesheet($this->basePath('css/materialize.css')); ?>
+    <?php echo $this->headLink()->appendStylesheet($this->basePath('css/style.css')); ?>
+    <?php echo $this->headScript()->appendFile($this->basePath('jquery/jquery.min.js')); ?>
+    <?php echo $this->headScript()->appendFile($this->basePath('js/materialize.min.js')); ?>
+    <?php echo $this->headScript()->appendFile($this->basePath('js/script.js')); ?>
 
 </head>
 
 <body>
+<nav>
+    <div class="nav-wrapper blue-grey darken-4">
+        <a href="#" class="brand-logo">CODE TEST</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="<?php echo $this->basePath('user/index'); ?>">USERS</a></li>
+            <li><a href="<?php echo $this->basePath('user/add'); ?>">ADD</a></li>
+        </ul>
+    </div>
+</nav>
+
 
 <div class="container">
-    <header>
-        <h1>ZF2 and Doctrine2 Application Ready!</h1>
-    </header>
     <?php echo $this->content; ?>
 </div>
 
