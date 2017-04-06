@@ -12,3 +12,33 @@ a.delete-btn {
 a.delete-btn:hover {
     color: #e03434;
 }
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active
+{
+    -webkit-box-shadow: 0 0 0 1000px #eceff1 inset !important;
+    -webkit-text-fill-color: #000 !important;
+}
+
+
+.create-user-container {
+    margin: 0 auto;
+    float: none;
+}
+
+
+.create-user-container {
+    margin: 0 auto !important;
+    float: none !important;
+}
+
+.create-user-container .card-panel {
+    padding: 60px;
+    padding-bottom: 15px;
+}
+
+.btn-full {
+    width: 100%;
+}
