@@ -1,6 +1,7 @@
 var baseURL;
 $(function(){
 	baseURL = $("#baseURL").val();
+	$("#saveUser").on("click",function(){ saveUser(); });
 });
 
 
@@ -24,4 +25,23 @@ function deleteUser(userid)
 		$("#user"+userid).fadeOut(300);
 		console.log(data);
 	});
+}
+
+function saveUser()
+{
+	$("#saveUser").addClass("disabled");
+	$("#saveUser").html("Processing...");
+	var userData = {
+		"username": $("#username").val(),
+		"fullname": $("#fullname").val(),
+		"email": $("#email").val(),
+		"phone": $("#phone").val(),
+		"address": $("#address").val()
+	};
+
+	$.post(baseURL+"/user/save",{userData:userData},function(data){
+		$("#deleteBtn").html("Redirecting...");
+		window.location.href = baseURL+"/user/index";
+	});
+
 }

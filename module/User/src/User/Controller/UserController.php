@@ -22,7 +22,17 @@ class UserController extends AbstractActionController
 
      public function addAction()
      {
-     	
+
+     }
+
+     public function saveAction()
+     {
+          $user = new User();
+          $userData = $_POST["userData"];
+          $user->set($userData);
+          $ORM = $this->orm();
+          $ORM->persist($user);
+          $ORM->flush();
      }
 
      public function editAction()

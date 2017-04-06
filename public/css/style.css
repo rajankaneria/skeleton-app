@@ -46,3 +46,7 @@ input:-webkit-autofill:active
 .confirm-modal{
 	width: 500px;
 }
+
+#deleteConfirm .btn {
+    font-size: 12px;
+}
