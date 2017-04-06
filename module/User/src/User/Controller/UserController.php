@@ -2,15 +2,17 @@
 
 namespace User\Controller;
 
- use Zend\Mvc\Controller\AbstractActionController;
- use Zend\View\Model\ViewModel;
+use Zend\Mvc\Controller\AbstractActionController;
+use Zend\View\Model\ViewModel;
+use User\Entity\User;
+use User\Model\Db;
 
- class UserController extends AbstractActionController
- {
+class UserController extends AbstractActionController
+{
 
      public function indexAction()
      {
-          
+
      }
 
      public function addAction()
@@ -28,5 +30,4 @@ namespace User\Controller;
      	
      }
 
-
- }
+}
