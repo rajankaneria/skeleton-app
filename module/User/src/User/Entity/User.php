@@ -27,4 +27,37 @@ class User {
     protected $address;
 
 
+    /**
+     * Takes in array of users and sets them as property.
+     *
+     * @param string $property
+     * @param mixed $value
+     */
+    public function set($userArray) 
+    {
+        foreach ($userArray as $property => $value) {
+            $this->$property = $value;
+        }
+        
+    }
+
+     /**
+     * Convert the object to an array.
+     *
+     * @return array
+     */
+    public function getArrayCopy() 
+    {
+        $userArray = array(
+            "id" => $this->id,
+            "username" => $this->username,
+            "fullname" => $this->fullname,
+            "email" => $this->email,
+            "phone" => $this->phone,
+            "address" => $this->address
+        );
+        return $userArray;
+    }
+
+
 }

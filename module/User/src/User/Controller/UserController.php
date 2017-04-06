@@ -12,7 +12,12 @@ class UserController extends AbstractActionController
 
      public function indexAction()
      {
-
+          $ORM = $this->orm();
+          $users = $ORM->getRepository('User\Entity\User')->findAll();
+          foreach ($users as $key => $userRow) {
+               $userArray[] = $userRow->getArrayCopy();
+          }
+          return new ViewModel(array('users' => $userArray));
      }
 
      public function addAction()
@@ -30,4 +35,12 @@ class UserController extends AbstractActionController
      	
      }
 
+     /**
+     * Method to get Doctrine Entity Manager object
+     */
+     public function orm()
+     {
+          $em = $this->getServiceLocator()->get('Doctrine\ORM\EntityManager');
+          return $em;
+     }
 }
