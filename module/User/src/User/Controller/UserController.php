@@ -32,7 +32,11 @@ class UserController extends AbstractActionController
 
      public function deleteAction()
      {
-     	
+          $userID = $_POST["userid"];
+          $ORM = $this->orm();
+          $user = $ORM->find('User\Entity\User', $userID);
+          $ORM->remove($user);
+          $ORM->flush();
      }
 
      /**

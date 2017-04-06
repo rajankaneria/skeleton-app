@@ -17,7 +17,7 @@
                 </thead>
                 <tbody>
                   <?php foreach ($users as $key => $userRow) { ?>
-                  <tr>
+                  <tr id="user<?php echo $userRow['id']; ?>">
                     <td><?php echo $userRow["fullname"]; ?></td>
                     <td><?php echo $userRow["username"]; ?></td>
                     <td><?php echo $userRow["email"]; ?></td>
@@ -47,7 +47,7 @@
     <div class="row modal-footer">
     		<div class="col s2"></div>
     		<div class="col s4"><a href="#!" class="btn-full modal-action modal-close waves-effect waves-green btn">Close</a></div>
-    		<div class="col s4"><a href="#!" class="btn-full btn waves-effect waves-green deep-orange darken-3">Delete</a></div>
+    		<div class="col s4"><a id="deleteBtn" href="#!" class="btn-full btn waves-effect waves-green deep-orange darken-3">Delete</a></div>
     		<div class="col s2"></div>
     </div>
   </div>
