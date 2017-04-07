@@ -13,6 +13,7 @@
                     <th>Phone</th>
                     <th>Address</th>
                     <th>Delete</th>
+                    <th>Edit</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -24,6 +25,7 @@
                     <td><?php echo $userRow["phone"]; ?></td>
                     <td><?php echo $userRow["address"]; ?></td>
                     <td><a href="#!" onclick="deleteConfirm(<?php echo $userRow['id']; ?>)" class="delete-btn"><i class="material-icons">delete</i></a></td>
+                    <td><a href="#!" onclick="editUser(<?php echo $userRow['id']; ?>)" class="edit-btn"><i class="material-icons">mode_edit</i></a></td>
                   </tr>
                   <?php } ?>
 
@@ -95,8 +97,8 @@
                       <label for="address">Address</label>
                     </div>
 
-
-                  <a id="saveUser" class="waves-effect waves-light btn-large btn-full">Submit</a>
+					<input id="userid" type="hidden" />
+                  <a id="updateUserBtn" class="waves-effect waves-light btn-large btn-full">Submit</a>
 
                 </form>
               </div>

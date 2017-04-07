@@ -2,6 +2,7 @@ var baseURL;
 $(function(){
 	baseURL = $("#baseURL").val();
 	$("#saveUser").on("click",function(){ saveUser(); });
+	$("#updateUserBtn").on("click",function(){ updateUser(); });
 });
 
 
@@ -45,9 +46,36 @@ function saveUser()
 	});
 }
 
-function getUser(userid)
+
+function editUser(userid)
 {
+	$("#updateUser").openModal();
 	$.post(baseURL+"/user/get",{userid:userid},function(data){
-		console.log($.parseJSON(data));
+		var userData = $.parseJSON(data);
+		$("#username").val(userData.username);
+		$("#fullname").val(userData.fullname);
+		$("#email").val(userData.email);
+		$("#phone").val(userData.phone);
+		$("#address").val(userData.address);
+		$("#userid").val(userData.id);
+		Materialize.updateTextFields();
+	});
+}
+
+function updateUser()
+{
+	$("#updateUserBtn").addClass("disabled");
+	$("#updateUserBtn").html("Processing...");
+	var userid = $("#userid").val();
+	var userData = {
+		"username": $("#username").val(),
+		"fullname": $("#fullname").val(),
+		"email": $("#email").val(),
+		"phone": $("#phone").val(),
+		"address": $("#address").val()
+	};
+	$.post(baseURL+"/user/update",{userData:userData,userid:userid},function(data){
+		$("#updateUserBtn").html("Refreshing...");
+		window.location.href = baseURL+"/user/index";
 	});
 }

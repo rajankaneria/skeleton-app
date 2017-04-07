@@ -12,6 +12,14 @@ a.delete-btn {
 a.delete-btn:hover {
     color: #e03434;
 }
+a.edit-btn {
+    color: #ccc;
+}
+
+a.edit-btn:hover {
+    color: #039be5;
+}
+
 
 input:-webkit-autofill,
 input:-webkit-autofill:hover,

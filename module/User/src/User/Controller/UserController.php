@@ -35,9 +35,15 @@ class UserController extends AbstractActionController
           $ORM->flush();
      }
 
-     public function editAction()
+     public function updateAction()
      {
-     	
+          $userid = $_POST["userid"];
+     	$userData = $_POST["userData"];
+          $ORM = $this->orm();
+          $user = $ORM->find('User\Entity\User', $userid);
+          $user->set($userData);
+          $ORM->flush();
+          return $this->getResponse()->setContent(json_encode($userData));;
      }
 
      public function deleteAction()
