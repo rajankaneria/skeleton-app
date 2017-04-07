@@ -9,7 +9,10 @@ use User\Model\Db;
 
 class UserController extends AbstractActionController
 {
-
+     /**
+    * @desc Gets list of all users
+    * @return View with a table of user details
+    */
      public function indexAction()
      {
           $ORM = $this->orm();
@@ -19,12 +22,12 @@ class UserController extends AbstractActionController
           }
           return new ViewModel(array('users' => $userArray));
      }
-
-     public function addAction()
-     {
-
-     }
-
+     
+     /**
+     * @desc Adds a user to the database
+     * @param userData as post variable which have all the user details needed to be stored
+     * @return View with a table of user details
+     */
      public function saveAction()
      {
           $user = new User();
@@ -35,6 +38,11 @@ class UserController extends AbstractActionController
           $ORM->flush();
      }
 
+     /**
+     * @desc Updates user details in the database
+     * @param userData,userid as post variable which have all the user details needed to be updated and userid
+     * @return User details in json format
+     */
      public function updateAction()
      {
           $userid = $_POST["userid"];
@@ -46,6 +54,10 @@ class UserController extends AbstractActionController
           return $this->getResponse()->setContent(json_encode($userData));;
      }
 
+     /**
+     * @desc Deletes a user from the database
+     * @param userid as post variable, id of the user which needs to be deleted
+     */
      public function deleteAction()
      {
           $userID = $_POST["userid"];
@@ -55,6 +67,11 @@ class UserController extends AbstractActionController
           $ORM->flush();
      }
 
+     /**
+     * @desc Gets user details for a specific user id
+     * @param userid which is id(primary) for users table
+     * @return User data in json format
+     */
      public function getAction()
      {
           $userID = $_POST["userid"];
