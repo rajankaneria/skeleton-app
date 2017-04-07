@@ -43,5 +43,11 @@ function saveUser()
 		$("#deleteBtn").html("Redirecting...");
 		window.location.href = baseURL+"/user/index";
 	});
+}
 
+function getUser(userid)
+{
+	$.post(baseURL+"/user/get",{userid:userid},function(data){
+		console.log($.parseJSON(data));
+	});
 }

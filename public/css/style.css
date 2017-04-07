@@ -50,3 +50,6 @@ input:-webkit-autofill:active
 #deleteConfirm .btn {
     font-size: 12px;
 }
+#updateUser{
+	width:500px;
+}

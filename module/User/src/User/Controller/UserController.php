@@ -49,6 +49,15 @@ class UserController extends AbstractActionController
           $ORM->flush();
      }
 
+     public function getAction()
+     {
+          $userID = $_POST["userid"];
+          $ORM = $this->orm();
+          $user = $ORM->find('User\Entity\User', $userID);
+          $userArray = $user->getArrayCopy();
+          return $this->getResponse()->setContent(json_encode($userArray));;
+     }
+
      /**
      * Method to get Doctrine Entity Manager object
      */
