@@ -6,7 +6,8 @@ return array(
         'ZendDeveloperTools',
         'DoctrineModule',
         'DoctrineORMModule',
-        'User'
+        'User',
+		'Userapi'
     ),
     'module_listener_options' => array(
         'config_glob_paths'    => array(
